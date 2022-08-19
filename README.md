@@ -4,6 +4,8 @@ This is a simple project that tracks changes in a CSV database. The input to `Cs
 
 It uses the [CSV](https://hexdocs.pm/csv/CSV.html) library to read the CSV files.
 
+We assume the CSV files have a header row and the header names can be set in _lib/csv_compare/csv_api.ex_
+
 ## Run
 
 Navigate to the folder and run `iex -S mix`
