@@ -1,21 +1,15 @@
 # CsvCompare
 
-**TODO: Add description**
+This is a simple project that tracks changes in a CSV database. The input to `CsvCompare.run` are 2 files representing the CSV database at different points in time. The assumption is that all row data in database is unique. This lets us turn the rows of the database into a [MapSet](https://hexdocs.pm/elixir/1.13/MapSet.html) and compare the 2 versions for changes that occurred over time.
 
-## Installation
+It uses the [CSV](https://hexdocs.pm/csv/CSV.html) library to read the CSV files.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `csv_compare` to your list of dependencies in `mix.exs`:
+## Run
 
-```elixir
-def deps do
-  [
-    {:csv_compare, "~> 0.1.0"}
-  ]
-end
-```
+Navigate to the folder and run `iex -S mix`
+Then run:
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/csv_compare>.
+`CsvCompare.run("old.csv", "new.csv")`
 
+_old.csv_ and _new.csv_ should be in the _/data_ folder.
+The diffs are generated in the _/out_ folder.
